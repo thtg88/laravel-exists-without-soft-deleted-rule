@@ -1,7 +1,7 @@
 {
     "name": "thtg88/laravel-exists-without-soft-deleted-rule",
     "type": "library",
-    "description": "A package to send a contact request email.",
+    "description": "Provide a Laravel `exists` validation rule that excludes soft-deleted models.",
     "license": "MIT",
     "authors": [
         {
