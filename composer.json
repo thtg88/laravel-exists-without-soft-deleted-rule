@@ -1,0 +1,64 @@
+{
+    "name": "thtg88/laravel-exists-without-soft-deleted-rule",
+    "type": "library",
+    "description": "A package to send a contact request email.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Marassi",
+            "email": "admin@marco-marassi.com"
+        }
+    ],
+    "require": {
+        "illuminate/container": "^7.0.0",
+        "illuminate/contracts": "^7.0.0",
+        "illuminate/support": "^7.0.0",
+        "illuminate/validation": "^7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "brainmaestro/composer-git-hooks": "^2.8",
+        "phpstan/phpstan": "^0.12.14",
+        "orchestra/testbench": "^5.1",
+        "fzaninotto/faker": "^1.9"
+    },
+    "extra": {
+        "hooks": {
+            "pre-commit": [
+                "vendor/bin/php-cs-fixer fix --using-cache=no --diff --dry-run"
+            ]
+        },
+        "laravel": {
+            "providers": [
+                "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\LaravelExistsWithoutSoftDeletedRuleServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "[[ -d .git ]] && vendor/bin/cghooks add --no-lock || true"
+        ],
+        "post-update-cmd": [
+            "[[ -d .git ]] && vendor/bin/cghooks update || true"
+        ],
+        "check-style": [
+            "vendor/bin/php-cs-fixer fix --using-cache=no --diff --dry-run"
+        ],
+        "fix-style": "vendor/bin/php-cs-fixer fix --using-cache=no",
+        "stan": [
+            "vendor/bin/phpstan analyse src"
+        ],
+        "test": "vendor/bin/phpunit"
+    }
+}
