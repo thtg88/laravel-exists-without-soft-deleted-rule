@@ -33,6 +33,15 @@ Laravel Exists Without Soft Deleted Validation Rule exposes a validation rule to
 
 The validation rule is available using `exists_without_soft_deleted`.
 
+If you are validating the `name` attribute on the `users` table for example, you can use the rule as:
+```
+'name' => 'exists_without_soft_deleted:users',
+```
+
+For other example of usage, it's equivalent to Laravel's `exists` rule.
+
+See the [official Laravel documentation](https://laravel.com/docs/7.x/validation#rule-exists) for more information
+
 ## License
 
 Laravel Exists Without Soft Deleted Validation Rule is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
