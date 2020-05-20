@@ -15,12 +15,13 @@ class LaravelExistsWithoutSoftDeletedRuleServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../resources/lang' => resource_path(
-                'lang/vendor/laravel-exists-without-soft-deleted-rule'
-            ),
-        ]);
+            __DIR__.'/../resources/lang' => Container::getInstance()
+                ->resourcePath(
+                    'lang/vendor/laravel-exists-without-soft-deleted-rule'
+                ),
+        ], 'laravel-exists-without-soft-deleted-rule-translations');
         $this->loadTranslationsFrom(
-            __DIR__.'/../resources/lang/',
+            __DIR__.'/../resources/lang',
             'laravel-exists-without-soft-deleted-rule'
         );
 
