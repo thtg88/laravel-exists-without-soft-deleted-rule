@@ -2,7 +2,6 @@
 
 namespace Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests\Unit;
 
-use Illuminate\Support\Facades\Lang;
 use Thtg88\LaravelExistsWithoutSoftDeletedRule\Rules\ExistsWithoutSoftDeletedRule;
 use Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests\TestCase;
 use Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests\TestClasses\Models\TestModel;
