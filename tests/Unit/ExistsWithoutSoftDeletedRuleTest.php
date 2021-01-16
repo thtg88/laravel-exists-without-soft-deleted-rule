@@ -1,10 +1,10 @@
 <?php
 
-namespace Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests\Unit;
+namespace Thtg88\ExistsWithoutSoftDeletedRule\Tests\Unit;
 
-use Thtg88\LaravelExistsWithoutSoftDeletedRule\Rules\ExistsWithoutSoftDeletedRule;
-use Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests\TestCase;
-use Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests\TestClasses\Models\TestModel;
+use Thtg88\ExistsWithoutSoftDeletedRule\Rules\ExistsWithoutSoftDeletedRule;
+use Thtg88\ExistsWithoutSoftDeletedRule\Tests\TestCase;
+use Thtg88\ExistsWithoutSoftDeletedRule\Tests\TestClasses\Models\TestModel;
 
 class ExistsWithoutSoftDeletedRuleTest extends TestCase
 {

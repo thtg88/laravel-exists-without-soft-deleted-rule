@@ -1,6 +1,6 @@
 <?php
 
-namespace Thtg88\LaravelExistsWithoutSoftDeletedRule\Rules;
+namespace Thtg88\ExistsWithoutSoftDeletedRule\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\DB;
@@ -47,7 +47,7 @@ class ExistsWithoutSoftDeletedRule extends Exists implements Rule
         $this->requireParameterCount(
             1,
             $parameters,
-            'laravel-exists-without-soft-deleted-rule::exists_without_soft_deleted'
+            'exists-without-soft-deleted-rule::exists_without_soft_deleted'
         );
 
         [$connection, $table] = $this->parseTable($this->table);
@@ -96,9 +96,9 @@ class ExistsWithoutSoftDeletedRule extends Exists implements Rule
 
     public function message(): string
     {
-        return __('laravel-exists-without-soft-deleted-rule::validation.exists_without_soft_deleted', [
-             'attribute' => str_replace('_', ' ', Str::snake($this->attribute)),
-         ]);
+        return __('exists-without-soft-deleted-rule::validation.exists_without_soft_deleted', [
+            'attribute' => str_replace('_', ' ', Str::snake($this->attribute)),
+        ]);
     }
 
     /**
@@ -109,7 +109,7 @@ class ExistsWithoutSoftDeletedRule extends Exists implements Rule
     public function __toString()
     {
         return rtrim(sprintf(
-            'laravel-exists-without-soft-deleted-rule::exists_without_soft_deleted:%s,%s,%s',
+            'exists-without-soft-deleted-rule::exists_without_soft_deleted:%s,%s,%s',
             $this->table,
             $this->column,
             $this->formatWheres()
@@ -125,10 +125,7 @@ class ExistsWithoutSoftDeletedRule extends Exists implements Rule
     {
         $formatted_wheres = $this->formatWheres();
 
-        $parameters = [
-            $this->table,
-            $this->column,
-        ];
+        $parameters = [$this->table, $this->column];
 
         if ($formatted_wheres !== '') {
             $parameters[] = $formatted_wheres;

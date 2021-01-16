@@ -22,7 +22,7 @@ composer require thtg88/laravel-exists-without-soft-deleted-rule
 
 You can publish the configuration file and views by running:
 ```bash
-php artisan vendor:publish --provider="Thtg88\LaravelExistsWithoutSoftDeletedRule\LaravelExistsWithoutSoftDeletedRuleServiceProvider"
+php artisan vendor:publish --provider="Thtg88\ExistsWithoutSoftDeletedRule\ExistsWithoutSoftDeletedRuleServiceProvider"
 ```
 
 ## Usage
