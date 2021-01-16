@@ -17,12 +17,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\": "src/"
+            "Thtg88\\ExistsWithoutSoftDeletedRule\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\Tests\\": "tests/"
+            "Thtg88\\ExistsWithoutSoftDeletedRule\\Tests\\": "tests/"
         }
     },
     "require-dev": {
@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-                "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\LaravelExistsWithoutSoftDeletedRuleServiceProvider"
+                "Thtg88\\ExistsWithoutSoftDeletedRule\\ExistsWithoutSoftDeletedRuleServiceProvider"
             ]
         }
     },

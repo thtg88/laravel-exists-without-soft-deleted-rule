@@ -1,12 +1,12 @@
 <?php
 
-namespace Thtg88\LaravelExistsWithoutSoftDeletedRule\Tests;
+namespace Thtg88\ExistsWithoutSoftDeletedRule\Tests;
 
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Thtg88\LaravelExistsWithoutSoftDeletedRule\LaravelExistsWithoutSoftDeletedRuleServiceProvider;
+use Thtg88\ExistsWithoutSoftDeletedRule\ExistsWithoutSoftDeletedRuleServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
@@ -21,7 +21,7 @@ abstract class TestCase extends Orchestra
 
     protected function getPackageProviders($app): array
     {
-        return [LaravelExistsWithoutSoftDeletedRuleServiceProvider::class];
+        return [ExistsWithoutSoftDeletedRuleServiceProvider::class];
     }
 
     protected function setUpDatabase(): void
