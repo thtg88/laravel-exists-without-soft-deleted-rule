@@ -1,4 +1,4 @@
-name: Laravel Contact Request CI
+name: Laravel Exists Without Soft Deleted Rule CI
 
 on:
   push:
