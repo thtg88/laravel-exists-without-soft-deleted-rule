@@ -3,7 +3,6 @@
 namespace Thtg88\ExistsWithoutSoftDeletedRule\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Concerns\ValidatesAttributes;
 use Illuminate\Validation\Rules\Exists;
@@ -13,7 +12,6 @@ use Illuminate\Validation\Rules\Exists;
  * in a database table.
  *
  * If a database column is not specified, the attribute will be used.
- *
  */
 class ExistsWithoutSoftDeletedRule extends Exists implements Rule
 {
@@ -34,8 +32,9 @@ class ExistsWithoutSoftDeletedRule extends Exists implements Rule
      * in a database table.
      *
      * @param string $attribute
-     * @param mixed $value
-     * @param array $parameters
+     * @param mixed  $value
+     * @param array  $parameters
+     *
      * @return bool
      */
     public function passes($attribute, $value): bool
